@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export const App = () => {
+  const [asd, setAsd] = useState(false)
+
   return (
     <div
       style={{
@@ -10,7 +14,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <button onClick={()=>setAsd(!asd)}>Нажми</button>
+      {asd === true ? <>Ты пидор</> : <></>}
     </div>
   );
 };
