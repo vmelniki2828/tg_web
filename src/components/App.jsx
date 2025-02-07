@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Header from './Header/Header';
+import Buttonnn from './Button/Button';
 const tg = window.Telegram.WebApp;
 
 export const App = () => {
@@ -23,6 +24,7 @@ export const App = () => {
   return (
     <div>
       <Header />
+      <Buttonnn />
       work<button onClick={onClose}>Закрыть</button>
     </div>
   );

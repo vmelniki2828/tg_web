@@ -1,7 +1,7 @@
 import { ButtonCon } from "./Button.styled";
 
-const Button = () =>{
+const Buttonnn = () =>{
     return(<ButtonCon>sdadsadas</ButtonCon>)
 }
 
-export default Button;
+export default Buttonnn;
