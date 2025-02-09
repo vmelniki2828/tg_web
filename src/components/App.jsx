@@ -34,7 +34,7 @@ export const App = () => {
       <Header />
       <Buttonnn />
       work<button onClick={onClose}>Закрыть</button>
-      <>{(theme = '#ffffff' ? <img src={light_bg} /> : <img src={dark_bg} />)}</>
+      <>{(theme === '#ffffff' ? <img src={light_bg} /> : <img src={dark_bg} />)}</>
     </div>
   );
 };
