@@ -5,7 +5,8 @@ import {
   PersonIcon,
   MenuContainer,
   CloseButton,
-  DynamicImage,
+  DynamicImageLight,
+  DynamicImageDark,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
@@ -41,7 +42,7 @@ const Header = () => {
     <>
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} />
-        {theme === '#ffffff' ? <DynamicImage src={fnode_light} /> : <DynamicImage src={fnode_dark} />}
+        {theme === '#ffffff' ? <DynamicImageLight src={fnode_light} /> : <DynamicImageDark src={fnode_dark} />}
         <PersonIcon />
       </HeaderContainer>
       <MenuContainer isOpen={isMenuOpen}>

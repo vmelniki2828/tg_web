@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #333;
+  background-color: transparent;
   color: white;
 `;
 
@@ -73,10 +73,21 @@ export const CloseButton = styled.div`
   color: white;
 `;
 
-export const DynamicImage = styled.img`
+export const DynamicImageLight = styled.img`
   width: 50px;
   height: 50px;
   cursor: pointer;
   margin: 0 10px;
+  background: black;
+  border-radius: 50%;
+`;
+
+export const DynamicImageDark = styled.img`
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0 10px;
+  background: white;
+  border-radius: 50%;
 `;
 
