@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BurgerIcon,
   HeaderContainer,
@@ -9,28 +9,39 @@ import {
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
+const tg = window.Telegram.WebApp;
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showFirstImage, setShowFirstImage] = useState(true); // Для переключения картинки
+  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff'); // Изначальное значение
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleImage = () => {
-    setShowFirstImage(!showFirstImage); // Меняем картинку при клике
-  };
+  useEffect(() => {
+    tg.ready();
+
+    // Устанавливаем начальную тему
+    setTheme(tg.themeParams.bg_color);
+
+    // Добавляем обработчик события для смены темы
+    tg.onEvent('themeChanged', () => {
+      setTheme(tg.themeParams.bg_color);
+    });
+
+    // Чистим обработчик при размонтировании
+    return () => {
+      tg.offEvent('themeChanged');
+    };
+  }, []);
 
   return (
     <>
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} />
-        <DynamicImage
-          src={showFirstImage ? fnode_light : fnode_dark}
-          alt="Dynamic Image"
-          onClick={toggleImage} // Переключение картинки по клику
-        />
+        {theme === '#ffffff' ? <DynamicImage src={fnode_light} /> : <DynamicImage src={fnode_dark} />}
         <PersonIcon />
       </HeaderContainer>
       <MenuContainer isOpen={isMenuOpen}>

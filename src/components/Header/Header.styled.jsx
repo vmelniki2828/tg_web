@@ -79,3 +79,4 @@ export const DynamicImage = styled.img`
   cursor: pointer;
   margin: 0 10px;
 `;
+
