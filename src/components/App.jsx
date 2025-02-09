@@ -26,6 +26,7 @@ export const App = () => {
       <Header />
       <Buttonnn />
       work<button onClick={onClose}>Закрыть</button>
+      <>{tg.themeParams.bg_color}</>
     </div>
   );
 };
