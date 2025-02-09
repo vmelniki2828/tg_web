@@ -6,14 +6,23 @@ import dark_bg from '../images/dark_bg.png';
 const tg = window.Telegram.WebApp;
 
 export const App = () => {
-  const [theme, setTheme] = useState();
-
-  useEffect(() => {
-    setTheme(tg.themeParams.bg_color);
-  }, [tg.themeParams.bg_color]);
+  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff'); // Изначальное значение
 
   useEffect(() => {
     tg.ready();
+
+    // Устанавливаем начальную тему
+    setTheme(tg.themeParams.bg_color);
+
+    // Добавляем обработчик события для смены темы
+    tg.onEvent('themeChanged', () => {
+      setTheme(tg.themeParams.bg_color);
+    });
+
+    // Чистим обработчик при размонтировании
+    return () => {
+      tg.offEvent('themeChanged');
+    };
   }, []);
 
   const onClose = () => {
