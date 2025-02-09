@@ -13,6 +13,10 @@ export const App = () => {
   //   </div>
   // );
 
+  const [theme, setTheme] = useState();
+
+  useEffect(()=>{setTheme(tg.themeParams.bg_color)},[tg.themeParams.bg_color])
+
   useEffect(() => {
     tg.ready();
   }, []);
@@ -26,7 +30,7 @@ export const App = () => {
       <Header />
       <Buttonnn />
       work<button onClick={onClose}>Закрыть</button>
-      <>{tg.themeParams.bg_color}</>
+      <>{theme}</>
     </div>
   );
 };
