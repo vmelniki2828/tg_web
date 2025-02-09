@@ -72,3 +72,10 @@ export const CloseButton = styled.div`
   cursor: pointer;
   color: white;
 `;
+
+export const DynamicImage = styled.img`
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0 10px;
+`;
