@@ -6,15 +6,6 @@ import dark_bg from '../images/dark_bg.png';
 const tg = window.Telegram.WebApp;
 
 export const App = () => {
-  // const [asd, setAsd] = useState(false);
-  // return (
-  //   <div>
-  //     <Header />
-  //     <button onClick={() => setAsd(!asd)}>Нажми</button>
-  //     {asd === true ? <>Ты пидор</> : <></>}
-  //   </div>
-  // );
-
   const [theme, setTheme] = useState();
 
   useEffect(() => {
@@ -29,12 +20,24 @@ export const App = () => {
     tg.close();
   };
 
+  // Выбор фона на основе темы
+  const backgroundImage = theme === '#ffffff' ? `url(${light_bg})` : `url(${dark_bg})`;
+
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: backgroundImage,
+        backgroundSize: 'cover', // Растянуть фон на весь экран
+        backgroundPosition: 'center', // Центрирование фона
+        backgroundRepeat: 'no-repeat', // Отключить повторение
+        minHeight: '100vh', // Минимальная высота экрана
+        display: 'flex', // Для позиционирования контента внутри
+        flexDirection: 'column',
+      }}
+    >
       <Header />
       <Buttonnn />
-      work<button onClick={onClose}>Закрыть</button>
-      <>{(theme === '#ffffff' ? <img src={light_bg} /> : <img src={dark_bg} />)}</>
+      <button onClick={onClose}>Закрыть</button>
     </div>
   );
 };
