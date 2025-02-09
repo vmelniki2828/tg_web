@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import Buttonnn from './Button/Button';
+import light_bg from '../images/light_bg.png';
+import dark_bg from '../images/dark_bg.png';
 const tg = window.Telegram.WebApp;
 
 export const App = () => {
@@ -15,7 +17,9 @@ export const App = () => {
 
   const [theme, setTheme] = useState();
 
-  useEffect(()=>{setTheme(tg.themeParams.bg_color)},[tg.themeParams.bg_color])
+  useEffect(() => {
+    setTheme(tg.themeParams.bg_color);
+  }, [tg.themeParams.bg_color]);
 
   useEffect(() => {
     tg.ready();
@@ -30,7 +34,7 @@ export const App = () => {
       <Header />
       <Buttonnn />
       work<button onClick={onClose}>Закрыть</button>
-      <>{theme}</>
+      <>{(theme = '#ffffff' ? <img src={light_bg} /> : <img src={dark_bg} />)}</>
     </div>
   );
 };
