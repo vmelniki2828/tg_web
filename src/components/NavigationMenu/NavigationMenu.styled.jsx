@@ -6,12 +6,12 @@ export const MenuContainer = styled.div`
   left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   width: 100vw;
   height: 100vh;
-  background-color: #444;
+  background-color: #f5f5f5;
   color: white;
   transition: left 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   text-align: center;
   box-shadow: ${({ isOpen }) =>
@@ -42,11 +42,11 @@ export const HeaderNav = styled.div`
 `;
 
 export const NavItem = styled.div`
+  width: 95%;
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  margin-bottom: 8px;
-  border-radius: 8px;
+  border-radius: 35px;
   background-color: ${props => (props.active ? '#007bff' : '#fff')};
   color: ${props => (props.active ? '#fff' : '#000')};
   cursor: pointer;

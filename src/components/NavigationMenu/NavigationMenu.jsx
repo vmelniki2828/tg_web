@@ -13,7 +13,9 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen }) => {
   return (
     <MenuContainer isOpen={isMenuOpen}>
       <CloseButton onClick={toggleMenu}>×</CloseButton>
-      <HeaderNav>Navigation</HeaderNav>
+      <>
+        <HeaderNav>Navigation</HeaderNav>
+      </>
       <NavItem active onClick={() => navigate('/')}>
         <FaTachometerAlt />
         Dashboard
