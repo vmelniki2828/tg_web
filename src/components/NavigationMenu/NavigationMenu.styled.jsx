@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
   left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   width: 100vw;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: ${({ bgColor }) => bgColor}; /* Динамический цвет фона */
   color: white;
   transition: left 0.3s ease-in-out;
   display: flex;

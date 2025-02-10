@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <BurgerIcon onClick={toggleMenu} color={oppositeColor} />
+        <BurgerIcon onClick={toggleMenu} color={oppositeColor} bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}/>
         {theme === '#ffffff' ? (
           <HeaderCenterContainer>
             <DynamicImageContainer className="light">
