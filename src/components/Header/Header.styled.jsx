@@ -84,10 +84,28 @@ export const DynamicImage = styled.img`
 
 export const DynamicImageContainer = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background-color: ${({ bgColor }) => bgColor || 'rgb(255, 255, 255)'};
   width: 55px;
   height: 55px;
+  margin-right: 12px;
 `;
+
+export const DynamicText = styled.p`
+  margin: 0;
+
+  font-size: 45px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+`;
+
+export const HeaderCenterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`

@@ -11,6 +11,8 @@ import {
   DynamicImageDarkContainer,
   DynamicImageContainer,
   DynamicImage,
+  DynamicText,
+  HeaderCenterContainer,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
@@ -57,15 +59,19 @@ const Header = () => {
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} color={oppositeColor} />
         {theme === '#ffffff' ? (
-          <DynamicImageContainer bgColor="#ffffff">
-            <DynamicImage src={fnode_light} />
-            asd
-          </DynamicImageContainer>
+          <HeaderCenterContainer>
+            <DynamicImageContainer bgColor="#ffffff">
+              <DynamicImage src={fnode_light} />
+            </DynamicImageContainer>
+            <DynamicText>fNode</DynamicText>
+          </HeaderCenterContainer>
         ) : (
-          <DynamicImageContainer bgColor="#000000">
-            <DynamicImage src={fnode_dark} />
-            dsa
-          </DynamicImageContainer>
+          <HeaderCenterContainer>
+            <DynamicImageContainer bgColor="#000000">
+              <DynamicImage src={fnode_dark} />
+            </DynamicImageContainer>
+            <DynamicText>fNode</DynamicText>
+          </HeaderCenterContainer>
         )}
         <PersonIcon color={oppositeColor} />
       </HeaderContainer>
