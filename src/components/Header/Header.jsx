@@ -63,14 +63,14 @@ const Header = () => {
             <DynamicImageContainer className="light">
               <DynamicImage src={fnode_light} />
             </DynamicImageContainer>
-            <DynamicText>fNode</DynamicText>
+            <DynamicText className="light">fNode</DynamicText>
           </HeaderCenterContainer>
         ) : (
           <HeaderCenterContainer>
             <DynamicImageContainer className="dark">
               <DynamicImage src={fnode_dark} />
             </DynamicImageContainer>
-            <DynamicText>fNode</DynamicText>
+            <DynamicText className="dark">fNode</DynamicText>
           </HeaderCenterContainer>
         )}
         <PersonIcon color={oppositeColor} />

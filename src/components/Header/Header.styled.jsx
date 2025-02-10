@@ -89,6 +89,7 @@ export const DynamicImageContainer = styled.div`
   border-radius: 50%;
   width: 55px;
   height: 55px;
+  margin-right: 12px;
 
   /* Стили для светлой темы */
   &.light {
@@ -110,6 +111,16 @@ export const DynamicText = styled.p`
   font-weight: bold;
   line-height: 1.2;
   text-align: left;
+
+  /* Стили для светлой темы */
+  &.light {
+    color: rgb(255, 255, 255);
+  }
+
+  /* Стили для тёмной темы */
+  &.dark {
+    color: rgb(0, 0, 0);
+  }
 `;
 
 export const HeaderCenterContainer = styled.div`
