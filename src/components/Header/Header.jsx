@@ -16,6 +16,7 @@ import {
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
+import { useNavigate } from 'react-router-dom';
 
 const tg = window.Telegram.WebApp;
 
@@ -23,6 +24,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
   const [oppositeColor, setOppositeColor] = useState('#000000'); // Изначально противоположный цвет
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
