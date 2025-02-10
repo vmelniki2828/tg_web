@@ -12,8 +12,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const BurgerIcon = styled(CgMenuLeftAlt)`
-  width: 30px;
-  height: 20px;
+  width: 24px;
+  height: 26px;
   cursor: pointer;
   position: relative;
   color: ${({ color }) => color || '#000'};
@@ -37,8 +37,8 @@ export const BurgerIcon = styled(CgMenuLeftAlt)`
 `;
 
 export const PersonIcon = styled(BsFillPersonFill)`
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 26px;
   color: ${({ color }) => color || '#000'};
 `;
 
@@ -66,6 +66,7 @@ export const MenuContainer = styled.div`
     cursor: pointer;
   }
 `;
+
 
 export const CloseButton = styled.div`
   position: absolute;
@@ -114,12 +115,12 @@ export const DynamicText = styled.p`
 
   /* Стили для светлой темы */
   &.light {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
 
   /* Стили для тёмной темы */
   &.dark {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 `;
 
