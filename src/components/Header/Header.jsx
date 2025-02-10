@@ -44,10 +44,10 @@ const Header = () => {
         <BurgerIcon onClick={toggleMenu} />
         {theme === '#ffffff' ? (
           <DynamicImageLightContainer>
-            <DynamicImageLight src={fnode_light} />
+            <DynamicImageDark src={fnode_dark} />
           </DynamicImageLightContainer>
         ) : (
-          <DynamicImageDark src={fnode_dark} />
+          <DynamicImageLight src={fnode_light} />
         )}
         <PersonIcon />
       </HeaderContainer>
