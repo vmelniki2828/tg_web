@@ -84,14 +84,21 @@ export const DynamicImage = styled.img`
 
 export const DynamicImageContainer = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: ${({ bgColor }) => bgColor || 'rgb(255, 255, 255)'};
   width: 55px;
   height: 55px;
-  margin-right: 12px;
+
+  /* Стили для светлой темы */
+  &.light {
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Стили для тёмной темы */
+  &.dark {
+    background-color: rgb(0, 0, 0);
+  }
 `;
 
 export const DynamicText = styled.p`
@@ -108,4 +115,4 @@ export const DynamicText = styled.p`
 export const HeaderCenterContainer = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;

@@ -60,14 +60,14 @@ const Header = () => {
         <BurgerIcon onClick={toggleMenu} color={oppositeColor} />
         {theme === '#ffffff' ? (
           <HeaderCenterContainer>
-            <DynamicImageContainer bgColor="#ffffff">
+            <DynamicImageContainer className="light">
               <DynamicImage src={fnode_light} />
             </DynamicImageContainer>
             <DynamicText>fNode</DynamicText>
           </HeaderCenterContainer>
         ) : (
           <HeaderCenterContainer>
-            <DynamicImageContainer bgColor="#000000">
+            <DynamicImageContainer className="dark">
               <DynamicImage src={fnode_dark} />
             </DynamicImageContainer>
             <DynamicText>fNode</DynamicText>
