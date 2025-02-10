@@ -78,7 +78,7 @@ const Header = () => {
       <MenuContainer isOpen={isMenuOpen}>
         <CloseButton onClick={toggleMenu}>×</CloseButton>
         <div>Menu Item 1</div>
-        <div>Menu Item 2</div>
+        <div onClick={() => navigate('/boots')}>Menu Item 2</div>
         <div>Menu Item 3</div>
       </MenuContainer>
     </>
