@@ -42,41 +42,6 @@ export const PersonIcon = styled(BsFillPersonFill)`
   color: ${({ color }) => color || '#000'};
 `;
 
-export const MenuContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  width: 100vw;
-  height: 100vh;
-  background-color: #444;
-  color: white;
-  transition: left 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: ${({ isOpen }) =>
-    isOpen ? '2px 0 5px rgba(0,0,0,0.5)' : 'none'};
-
-  div {
-    margin: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-`;
-
-
-export const CloseButton = styled.div`
-  position: absolute;
-  top: 0;
-  left: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-`;
-
 export const DynamicImage = styled.img`
   width: 33px;
   height: 33px;

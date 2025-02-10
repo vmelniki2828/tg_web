@@ -13,21 +13,23 @@ import {
   DynamicImage,
   DynamicText,
   HeaderCenterContainer,
+  HeaderNav,
+  NavItem,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
 import { useNavigate } from 'react-router-dom';
+import NavigationMenu from 'components/NavigationMenu/NavigationMenu';
 
 const tg = window.Telegram.WebApp;
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
   const [oppositeColor, setOppositeColor] = useState('#000000'); // Изначально противоположный цвет
-  const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prev => !prev);
   };
 
   useEffect(() => {
@@ -77,12 +79,7 @@ const Header = () => {
         )}
         <PersonIcon color={oppositeColor} />
       </HeaderContainer>
-      <MenuContainer isOpen={isMenuOpen}>
-        <CloseButton onClick={toggleMenu}>×</CloseButton>
-        <div>Menu Item 1</div>
-        <div onClick={() => navigate('/boots')}>Menu Item 2</div>
-        <div>Menu Item 3</div>
-      </MenuContainer>
+      <NavigationMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
     </>
   );
 };
