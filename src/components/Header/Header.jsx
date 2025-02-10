@@ -12,15 +12,25 @@ import {
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
+
 const tg = window.Telegram.WebApp;
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff'); // Изначальное значение
+  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
+  const [oppositeColor, setOppositeColor] = useState('#000000'); // Изначально противоположный цвет
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    // Функция для вычисления противоположного цвета
+    const calculateOppositeColor = (color) => (color === '#ffffff' ? '#000000' : '#ffffff');
+
+    // Устанавливаем противоположный цвет при изменении темы
+    setOppositeColor(calculateOppositeColor(theme));
+  }, [theme]); // Срабатывает при изменении theme
 
   useEffect(() => {
     tg.ready();
@@ -42,7 +52,7 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <BurgerIcon onClick={toggleMenu} />
+        <BurgerIcon onClick={toggleMenu} color={oppositeColor} />
         {theme === '#ffffff' ? (
           <DynamicImageDarkContainer>
             <DynamicImageLight src={fnode_light} />

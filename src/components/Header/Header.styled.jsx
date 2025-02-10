@@ -16,6 +16,7 @@ export const BurgerIcon = styled(CgMenuLeftAlt)`
   height: 20px;
   cursor: pointer;
   position: relative;
+  color: ${({ color }) => color || '#000'};
 
   &::before,
   &::after {
