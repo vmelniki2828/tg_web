@@ -81,8 +81,21 @@ export const DynamicImageLight = styled.img`
 `;
 
 export const DynamicImageLightContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+`;
+
+export const DynamicImageDarkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
   width: 55px;
   height: 55px;
 `;
@@ -94,11 +107,4 @@ export const DynamicImageDark = styled.img`
   margin: 0 10px;
   background: white;
   border-radius: 50%;
-`;
-
-export const DynamicImageDarkContainer = styled.div`
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  width: 55px;
-  height: 55px;
 `;

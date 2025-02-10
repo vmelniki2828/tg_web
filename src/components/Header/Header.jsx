@@ -8,6 +8,7 @@ import {
   DynamicImageLight,
   DynamicImageDark,
   DynamicImageLightContainer,
+  DynamicImageDarkContainer,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
@@ -43,7 +44,9 @@ const Header = () => {
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} />
         {theme === '#ffffff' ? (
-          <DynamicImageLight src={fnode_light} />
+          <DynamicImageDarkContainer>
+            <DynamicImageLight src={fnode_light} />
+          </DynamicImageDarkContainer>
         ) : (
           <DynamicImageLightContainer>
             <DynamicImageDark src={fnode_dark} />
