@@ -54,7 +54,8 @@ export const MenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: ${({ isOpen }) => (isOpen ? '2px 0 5px rgba(0,0,0,0.5)' : 'none')};
+  box-shadow: ${({ isOpen }) =>
+    isOpen ? '2px 0 5px rgba(0,0,0,0.5)' : 'none'};
 
   div {
     margin: 15px 0;
@@ -74,12 +75,16 @@ export const CloseButton = styled.div`
 `;
 
 export const DynamicImageLight = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 33px;
+  height: 33px;
   cursor: pointer;
-  margin: 0 10px;
-  background: black;
+`;
+
+export const DynamicImageLightContainer = styled.div`
   border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
 `;
 
 export const DynamicImageDark = styled.img`
@@ -91,3 +96,9 @@ export const DynamicImageDark = styled.img`
   border-radius: 50%;
 `;
 
+export const DynamicImageDarkContainer = styled.div`
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+`;

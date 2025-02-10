@@ -7,11 +7,11 @@ import {
   CloseButton,
   DynamicImageLight,
   DynamicImageDark,
+  DynamicImageLightContainer,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
 const tg = window.Telegram.WebApp;
-
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,13 @@ const Header = () => {
     <>
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} />
-        {theme === '#ffffff' ? <DynamicImageLight src={fnode_light} /> : <DynamicImageDark src={fnode_dark} />}
+        {theme === '#ffffff' ? (
+          <DynamicImageLightContainer>
+            <DynamicImageLight src={fnode_light} />
+          </DynamicImageLightContainer>
+        ) : (
+          <DynamicImageDark src={fnode_dark} />
+        )}
         <PersonIcon />
       </HeaderContainer>
       <MenuContainer isOpen={isMenuOpen}>
