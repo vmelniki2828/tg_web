@@ -8,6 +8,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/boots" element={<BoostPage />} />
+        <Route path="*" element={<MainPage />} />
       </Routes>
     </Router>
   );
