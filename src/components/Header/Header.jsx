@@ -79,7 +79,7 @@ const Header = () => {
         )}
         <PersonIcon color={oppositeColor} />
       </HeaderContainer>
-      <NavigationMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <NavigationMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} theme={theme}/>
     </>
   );
 };

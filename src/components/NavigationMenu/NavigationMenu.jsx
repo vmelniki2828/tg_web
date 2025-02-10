@@ -7,11 +7,11 @@ import {
 } from './NavigationMenu.styled';
 import { FaTachometerAlt, FaRocket, FaBroom, FaChartBar } from 'react-icons/fa';
 
-const NavigationMenu = ({ toggleMenu, isMenuOpen }) => {
+const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
   const navigate = useNavigate();
 
   return (
-    <MenuContainer isOpen={isMenuOpen}>
+    <MenuContainer isOpen={isMenuOpen} bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}>
       <CloseButton onClick={toggleMenu}>×</CloseButton>
       <>
         <HeaderNav>Navigation</HeaderNav>
