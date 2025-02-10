@@ -92,12 +92,12 @@ export const DynamicImageContainer = styled.div`
 
   /* Стили для светлой темы */
   &.light {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
   }
 
   /* Стили для тёмной темы */
   &.dark {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
   }
 `;
 
