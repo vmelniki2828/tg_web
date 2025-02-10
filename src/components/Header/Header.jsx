@@ -9,6 +9,8 @@ import {
   DynamicImageDark,
   DynamicImageLightContainer,
   DynamicImageDarkContainer,
+  DynamicImageContainer,
+  DynamicImage,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
@@ -26,7 +28,8 @@ const Header = () => {
 
   useEffect(() => {
     // Функция для вычисления противоположного цвета
-    const calculateOppositeColor = (color) => (color === '#ffffff' ? '#000000' : '#ffffff');
+    const calculateOppositeColor = color =>
+      color === '#ffffff' ? '#000000' : '#ffffff';
 
     // Устанавливаем противоположный цвет при изменении темы
     setOppositeColor(calculateOppositeColor(theme));
@@ -54,15 +57,17 @@ const Header = () => {
       <HeaderContainer>
         <BurgerIcon onClick={toggleMenu} color={oppositeColor} />
         {theme === '#ffffff' ? (
-          <DynamicImageDarkContainer>
-            <DynamicImageLight src={fnode_light} />
-          </DynamicImageDarkContainer>
+          <DynamicImageContainer bgColor="#ffffff">
+            <DynamicImage src={fnode_light} />
+            asd
+          </DynamicImageContainer>
         ) : (
-          <DynamicImageLightContainer>
-            <DynamicImageDark src={fnode_dark} />
-          </DynamicImageLightContainer>
+          <DynamicImageContainer bgColor="#000000">
+            <DynamicImage src={fnode_dark} />
+            dsa
+          </DynamicImageContainer>
         )}
-        <PersonIcon />
+        <PersonIcon color={oppositeColor} />
       </HeaderContainer>
       <MenuContainer isOpen={isMenuOpen}>
         <CloseButton onClick={toggleMenu}>×</CloseButton>

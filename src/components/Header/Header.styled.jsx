@@ -39,6 +39,7 @@ export const BurgerIcon = styled(CgMenuLeftAlt)`
 export const PersonIcon = styled(BsFillPersonFill)`
   width: 30px;
   height: 30px;
+  color: ${({ color }) => color || '#000'};
 `;
 
 export const MenuContainer = styled.div`
@@ -75,36 +76,18 @@ export const CloseButton = styled.div`
   color: white;
 `;
 
-export const DynamicImageLight = styled.img`
+export const DynamicImage = styled.img`
   width: 33px;
   height: 33px;
   cursor: pointer;
 `;
 
-export const DynamicImageDark = styled.img`
-  width: 33px;
-  height: 33px;
-  cursor: pointer;
-`;
-
-export const DynamicImageLightContainer = styled.div`
+export const DynamicImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: ${({ bgColor }) => bgColor || 'rgb(255, 255, 255)'};
   width: 55px;
   height: 55px;
 `;
-
-export const DynamicImageDarkContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgb(0, 0, 0);
-  width: 55px;
-  height: 55px;
-`;
-
-
