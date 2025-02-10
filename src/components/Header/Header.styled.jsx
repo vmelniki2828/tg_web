@@ -80,6 +80,12 @@ export const DynamicImageLight = styled.img`
   cursor: pointer;
 `;
 
+export const DynamicImageDark = styled.img`
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+`;
+
 export const DynamicImageLightContainer = styled.div`
   display: flex;
   align-items: center;
@@ -100,11 +106,4 @@ export const DynamicImageDarkContainer = styled.div`
   height: 55px;
 `;
 
-export const DynamicImageDark = styled.img`
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  margin: 0 10px;
-  background: white;
-  border-radius: 50%;
-`;
+
