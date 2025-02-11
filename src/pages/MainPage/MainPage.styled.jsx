@@ -59,6 +59,7 @@ export const BottomContainer = styled.div`
   position: absolute;
   bottom: 41px;
   gap: 40px;
+
 `;
 
 export const BotCon = styled.div`
