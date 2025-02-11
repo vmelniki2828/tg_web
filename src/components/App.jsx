@@ -1,5 +1,5 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from '../pages/MainPage';
+import MainPage from '../pages/MainPage/MainPage';
 import BoostPage from '../pages/BoostPage';
 import Layout from './Layout/Layout';
 
