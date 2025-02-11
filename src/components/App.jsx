@@ -1,15 +1,18 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from './pages/MainPage';
-import BoostPage from './pages/BoostPage';
+import MainPage from '../pages/MainPage';
+import BoostPage from '../pages/BoostPage';
+import Layout from './Layout/Layout';
 
 export const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/boots" element={<BoostPage />} />
-        <Route path="*" element={<MainPage />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/boots" element={<BoostPage />} />
+          <Route path="*" element={<MainPage />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 };

@@ -5,22 +5,37 @@ import {
   HeaderNav,
   NavItem,
 } from './NavigationMenu.styled';
-import { FaTachometerAlt, FaRocket, FaBroom, FaChartBar } from 'react-icons/fa';
+import { FaRocket, FaBroom, FaChartBar } from 'react-icons/fa';
+import { HiMiniSquares2X2 } from 'react-icons/hi2';
 
 const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
   const navigate = useNavigate();
 
   return (
-    <MenuContainer isOpen={isMenuOpen} bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}>
+    <MenuContainer
+      isOpen={isMenuOpen}
+      bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}
+    >
       <CloseButton onClick={toggleMenu}>×</CloseButton>
       <>
         <HeaderNav>Navigation</HeaderNav>
       </>
-      <NavItem active onClick={() => navigate('/')}>
-        <FaTachometerAlt />
+      <NavItem
+        active
+        onClick={() => {
+          navigate('/');
+          toggleMenu();
+        }}
+      >
+        <HiMiniSquares2X2 />
         Dashboard
       </NavItem>
-      <NavItem onClick={() => navigate('/boots')}>
+      <NavItem
+        onClick={() => {
+          navigate('/boots');
+          toggleMenu();
+        }}
+      >
         <FaRocket />
         Boost
       </NavItem>

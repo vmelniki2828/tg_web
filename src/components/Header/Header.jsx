@@ -27,6 +27,8 @@ const Header = () => {
   const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
   const [oppositeColor, setOppositeColor] = useState('#000000'); // Изначально противоположный цвет
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  console.log(navigate);
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
@@ -61,7 +63,11 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <BurgerIcon onClick={toggleMenu} color={oppositeColor} bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}/>
+        <BurgerIcon
+          onClick={toggleMenu}
+          color={oppositeColor}
+          bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}
+        />
         {theme === '#ffffff' ? (
           <HeaderCenterContainer>
             <DynamicImageContainer className="light">
@@ -79,7 +85,11 @@ const Header = () => {
         )}
         <PersonIcon color={oppositeColor} />
       </HeaderContainer>
-      <NavigationMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} theme={theme}/>
+      <NavigationMenu
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        theme={theme}
+      />
     </>
   );
 };

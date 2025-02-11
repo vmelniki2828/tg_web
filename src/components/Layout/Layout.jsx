@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import Header from '../Header/Header';
-import Buttonnn from '../Button/Button';
+import React, { useEffect, useState } from 'react';
+import Header from '../../components/Header/Header';
 import light_bg from '../../images/light_bg.png';
 import dark_bg from '../../images/dark_bg.png';
+
 const tg = window.Telegram.WebApp;
 
-const MainPage = () => {
-  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff'); // Изначальное значение
+const Layout = ({ children }) => {
+  const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
 
   useEffect(() => {
     tg.ready();
@@ -25,10 +25,6 @@ const MainPage = () => {
     };
   }, []);
 
-  const onClose = () => {
-    tg.close();
-  };
-
   // Выбор фона на основе темы
   const backgroundImage =
     theme === '#ffffff' ? `url(${light_bg})` : `url(${dark_bg})`;
@@ -37,19 +33,18 @@ const MainPage = () => {
     <div
       style={{
         backgroundImage: backgroundImage,
-        backgroundSize: 'cover', // Растянуть фон на весь экран
-        backgroundPosition: 'center', // Центрирование фона
-        backgroundRepeat: 'no-repeat', // Отключить повторение
-        minHeight: '100vh', // Минимальная высота экрана
-        display: 'flex', // Для позиционирования контента внутри
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh',
+        display: 'flex',
         flexDirection: 'column',
       }}
     >
       <Header />
-      <Buttonnn />
-      <button onClick={onClose}>Закрыть</button>
+      <div style={{ flex: 1 }}>{children}</div> {/* Контент страницы */}
     </div>
   );
 };
 
-export default MainPage;
+export default Layout;

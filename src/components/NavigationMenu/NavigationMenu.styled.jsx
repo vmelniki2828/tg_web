@@ -35,10 +35,11 @@ export const CloseButton = styled.div`
 `;
 
 export const HeaderNav = styled.div`
-  font-size: 1.25rem;
+  font-size: 30px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  margin-bottom: 16px;
-  text-align: center;
+  line-height: 1.2;
 `;
 
 export const NavItem = styled.div`
