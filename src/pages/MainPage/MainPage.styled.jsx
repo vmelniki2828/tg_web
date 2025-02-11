@@ -55,7 +55,7 @@ export const BottomContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%; /* На всю ширину */
+  width: 95%; /* На всю ширину */
   position: absolute;
   bottom: 0;
   margin-bottom: 41px;
