@@ -10,6 +10,7 @@ import {
   MainContainer,
   QuestionCon,
   StatusContainer,
+  TopCon,
   UpdateBottom,
 } from './MainPage.styled';
 const tg = window.Telegram.WebApp;
@@ -27,6 +28,9 @@ const MainPage = () => {
       </StatusContainer>
       <button onClick={onClose}>Закрыть</button>
       <BottomContainer>
+        <TopCon>
+          dsada
+        </TopCon>
         <BotCon>
           <ClearCasheBottom>Clear cache 53%</ClearCasheBottom>
           <UpdateBottom>Update</UpdateBottom>

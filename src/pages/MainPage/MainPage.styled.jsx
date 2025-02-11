@@ -58,6 +58,7 @@ export const BottomContainer = styled.div`
   width: 95%; /* На всю ширину */
   position: absolute;
   bottom: 41px;
+  gap: 40px;
 `;
 
 export const BotCon = styled.div`
@@ -102,4 +103,14 @@ export const UpdateBottom = styled.button`
   line-height: 1.2;
   cursor: pointer;
   border: none;
+`;
+
+export const TopCon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  width: 95%; /* На всю ширину */
+  border-radius: 50px;
+  height: 100px;
 `;
