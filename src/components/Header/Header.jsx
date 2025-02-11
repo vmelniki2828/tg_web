@@ -15,6 +15,7 @@ import {
   HeaderCenterContainer,
   HeaderNav,
   NavItem,
+  DynamicSmallText,
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
@@ -87,11 +88,15 @@ const Header = () => {
           <>
             {theme === '#ffffff' ? (
               <HeaderCenterContainer>
-                <DynamicText className="light">Maintenance</DynamicText>
+                <DynamicSmallText className="light">
+                  Maintenance
+                </DynamicSmallText>
               </HeaderCenterContainer>
             ) : (
               <HeaderCenterContainer>
-                <DynamicText className="dark">Maintenance</DynamicText>
+                <DynamicSmallText className="dark">
+                  Maintenance
+                </DynamicSmallText>
               </HeaderCenterContainer>
             )}
           </>
@@ -101,11 +106,15 @@ const Header = () => {
           <>
             {theme === '#ffffff' ? (
               <HeaderCenterContainer>
-                <DynamicText className="light">Clear Cache</DynamicText>
+                <DynamicSmallText className="light">
+                  Clear Cache
+                </DynamicSmallText>
               </HeaderCenterContainer>
             ) : (
               <HeaderCenterContainer>
-                <DynamicText className="dark">Clear Cache</DynamicText>
+                <DynamicSmallText className="dark">
+                  Clear Cache
+                </DynamicSmallText>
               </HeaderCenterContainer>
             )}
           </>
@@ -115,11 +124,13 @@ const Header = () => {
           <>
             {theme === '#ffffff' ? (
               <HeaderCenterContainer>
-                <DynamicText className="light">Statistics</DynamicText>
+                <DynamicSmallText className="light">
+                  Statistics
+                </DynamicSmallText>
               </HeaderCenterContainer>
             ) : (
               <HeaderCenterContainer>
-                <DynamicText className="dark">Statistics</DynamicText>
+                <DynamicSmallText className="dark">Statistics</DynamicSmallText>
               </HeaderCenterContainer>
             )}
           </>

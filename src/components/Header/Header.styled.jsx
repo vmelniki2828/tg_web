@@ -11,6 +11,22 @@ export const HeaderContainer = styled.div`
   color: white;
 `;
 
+export const DynamicSmallText = styled.p`
+  font-size: 30px;
+  font-family: 'ProductSans', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+
+  &.light {
+    color: rgb(0, 0, 0);
+  }
+
+  /* Стили для тёмной темы */
+  &.dark {
+    color: rgb(255, 255, 255);
+  }
+`;
+
 export const BurgerIcon = styled(CgMenuLeftAlt)`
   width: 24px;
   height: 26px;
