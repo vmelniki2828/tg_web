@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
-  height:100vh;
 }
 
 @font-face {
