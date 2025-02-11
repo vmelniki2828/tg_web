@@ -34,9 +34,9 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         Dashboard
       </NavItem>
       <NavItem
-        active={location.pathname === '/boots'} // Проверяем, является ли текущий маршрут "/boots"
+        active={location.pathname === '/boost'} // Проверяем, является ли текущий маршрут "/boots"
         onClick={() => {
-          navigate('/boots');
+          navigate('/boost');
           toggleMenu();
         }}
       >
@@ -44,9 +44,9 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         Boost
       </NavItem>
       <NavItem
-        active={location.pathname === '/clear-cache'} // Проверяем, является ли текущий маршрут "/clear-cache"
+        active={location.pathname === '/clearCache'} // Проверяем, является ли текущий маршрут "/clear-cache"
         onClick={() => {
-          navigate('/clear-cache');
+          navigate('/clearCache');
           toggleMenu();
         }}
       >
@@ -54,9 +54,9 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         Clear Cache
       </NavItem>
       <NavItem
-        active={location.pathname === '/statistics'} // Проверяем, является ли текущий маршрут "/statistics"
+        active={location.pathname === '/statistic'} // Проверяем, является ли текущий маршрут "/statistics"
         onClick={() => {
-          navigate('/statistics');
+          navigate('/statistic');
           toggleMenu();
         }}
       >

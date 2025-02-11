@@ -18,7 +18,7 @@ import {
 } from './Header.styled';
 import fnode_light from '../../images/fnode-white.png';
 import fnode_dark from '../../images/fnode-black.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import NavigationMenu from 'components/NavigationMenu/NavigationMenu';
 
 const tg = window.Telegram.WebApp;
@@ -28,7 +28,7 @@ const Header = () => {
   const [oppositeColor, setOppositeColor] = useState('#000000'); // Изначально противоположный цвет
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
-  console.log(navigate);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
@@ -60,6 +60,93 @@ const Header = () => {
     };
   }, []);
 
+  const renderHeaderCenter = () => {
+    switch (location.pathname) {
+      case '/':
+        return (
+          <>
+            {theme === '#ffffff' ? (
+              <HeaderCenterContainer>
+                <DynamicImageContainer className="light">
+                  <DynamicImage src={fnode_light} />
+                </DynamicImageContainer>
+                <DynamicText className="light">fNode</DynamicText>
+              </HeaderCenterContainer>
+            ) : (
+              <HeaderCenterContainer>
+                <DynamicImageContainer className="dark">
+                  <DynamicImage src={fnode_dark} />
+                </DynamicImageContainer>
+                <DynamicText className="dark">fNode</DynamicText>
+              </HeaderCenterContainer>
+            )}
+          </>
+        );
+      case '/boost':
+        return (
+          <>
+            {theme === '#ffffff' ? (
+              <HeaderCenterContainer>
+                <DynamicText className="light">Maintenance</DynamicText>
+              </HeaderCenterContainer>
+            ) : (
+              <HeaderCenterContainer>
+                <DynamicText className="dark">Maintenance</DynamicText>
+              </HeaderCenterContainer>
+            )}
+          </>
+        );
+      case '/clearCache':
+        return (
+          <>
+            {theme === '#ffffff' ? (
+              <HeaderCenterContainer>
+                <DynamicText className="light">Clear Cache</DynamicText>
+              </HeaderCenterContainer>
+            ) : (
+              <HeaderCenterContainer>
+                <DynamicText className="dark">Clear Cache</DynamicText>
+              </HeaderCenterContainer>
+            )}
+          </>
+        );
+      case '/statistic':
+        return (
+          <>
+            {theme === '#ffffff' ? (
+              <HeaderCenterContainer>
+                <DynamicText className="light">Statistics</DynamicText>
+              </HeaderCenterContainer>
+            ) : (
+              <HeaderCenterContainer>
+                <DynamicText className="dark">Statistics</DynamicText>
+              </HeaderCenterContainer>
+            )}
+          </>
+        );
+      default:
+        return (
+          <>
+            {theme === '#ffffff' ? (
+              <HeaderCenterContainer>
+                <DynamicImageContainer className="light">
+                  <DynamicImage src={fnode_light} />
+                </DynamicImageContainer>
+                <DynamicText className="light">fNode</DynamicText>
+              </HeaderCenterContainer>
+            ) : (
+              <HeaderCenterContainer>
+                <DynamicImageContainer className="dark">
+                  <DynamicImage src={fnode_dark} />
+                </DynamicImageContainer>
+                <DynamicText className="dark">fNode</DynamicText>
+              </HeaderCenterContainer>
+            )}
+          </>
+        );
+    }
+  };
+
   return (
     <>
       <HeaderContainer>
@@ -68,21 +155,7 @@ const Header = () => {
           color={oppositeColor}
           bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}
         />
-        {theme === '#ffffff' ? (
-          <HeaderCenterContainer>
-            <DynamicImageContainer className="light">
-              <DynamicImage src={fnode_light} />
-            </DynamicImageContainer>
-            <DynamicText className="light">fNode</DynamicText>
-          </HeaderCenterContainer>
-        ) : (
-          <HeaderCenterContainer>
-            <DynamicImageContainer className="dark">
-              <DynamicImage src={fnode_dark} />
-            </DynamicImageContainer>
-            <DynamicText className="dark">fNode</DynamicText>
-          </HeaderCenterContainer>
-        )}
+        {renderHeaderCenter()}
         <PersonIcon color={oppositeColor} />
       </HeaderContainer>
       <NavigationMenu
