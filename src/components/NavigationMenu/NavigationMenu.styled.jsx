@@ -104,6 +104,7 @@ export const Star = styled(BiSolidStar)`
   width: 18px;
   height: 18px;
   margin-left: 5px;
+  color: black;
 `;
 
 export const IconImg = styled.img`
@@ -116,4 +117,5 @@ export const Lightning = styled(BsFillLightningChargeFill)`
   width: 18px;
   height: 18px;
   margin-left: 5px;
+  color: black;
 `;
