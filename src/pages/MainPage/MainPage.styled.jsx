@@ -23,6 +23,7 @@ export const StatusContainer = styled.div`
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.2;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 `;
 
 export const CircleStatus = styled.div`
@@ -59,7 +60,6 @@ export const BottomContainer = styled.div`
   position: absolute;
   bottom: 41px;
   gap: 40px;
-
 `;
 
 export const BotCon = styled.div`
