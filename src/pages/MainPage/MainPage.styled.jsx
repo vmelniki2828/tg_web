@@ -57,10 +57,8 @@ export const BottomContainer = styled.div`
   justify-content: space-around;
   flex-direction: column;
   width: 95%; /* На всю ширину */
-
   position: absolute;
-  bottom: 0;
-  margin-bottom: 41px;
+  bottom: 41px;
 `;
 
 export const BotCon = styled.div`
