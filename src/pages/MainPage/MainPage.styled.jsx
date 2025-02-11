@@ -57,7 +57,7 @@ export const BottomContainer = styled.div`
   flex-direction: column;
   width: 95%; /* На всю ширину */
   position: absolute;
-  bottom: 0;
+  bottom: 41px;
 `;
 
 export const BotCon = styled.div`
