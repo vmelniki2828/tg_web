@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import light_bg from '../../images/light_bg.png';
 import dark_bg from '../../images/dark_bg.png';
 import {
+  BotCon,
   BottomContainer,
   CircleStatus,
   ClearCasheBottom,
@@ -26,8 +27,10 @@ const MainPage = () => {
       </StatusContainer>
       <button onClick={onClose}>Закрыть</button>
       <BottomContainer>
-        <ClearCasheBottom>Clear cache 53%</ClearCasheBottom>
-        <UpdateBottom>Update</UpdateBottom>
+        <BotCon>
+          <ClearCasheBottom>Clear cache 53%</ClearCasheBottom>
+          <UpdateBottom>Update</UpdateBottom>
+        </BotCon>
       </BottomContainer>
     </MainContainer>
   );

@@ -55,10 +55,21 @@ export const BottomContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
   width: 95%; /* На всю ширину */
+
   position: absolute;
   bottom: 0;
   margin-bottom: 41px;
+`;
+
+export const BotCon = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%; /* На всю ширину */
+  gap: 20px;
 `;
 
 export const ClearCasheBottom = styled.button`
@@ -70,7 +81,7 @@ export const ClearCasheBottom = styled.button`
   height: 65px;
   border-radius: 32.5px;
 
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'ProductSans', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -88,7 +99,7 @@ export const UpdateBottom = styled.button`
   height: 65px;
   border-radius: 32.5px;
 
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'ProductSans', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
