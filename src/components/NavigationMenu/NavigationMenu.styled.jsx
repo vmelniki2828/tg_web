@@ -40,7 +40,7 @@ export const CloseButton = styled.div`
 export const HeaderNav = styled.div`
   font-size: 30px;
   font-family: 'ProductSans', sans-serif;
-  color: rgb(0, 0, 0);
+  color: ${({ bgColor }) => bgColor}; /* Динамический цвет фона */
   font-weight: bold;
   line-height: 1.2;
 `;
