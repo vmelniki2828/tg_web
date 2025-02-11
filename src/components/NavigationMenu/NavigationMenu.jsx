@@ -19,7 +19,9 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
     >
       <CloseButton onClick={toggleMenu}>×</CloseButton>
       <>
-        <HeaderNav>Navigation</HeaderNav>
+        <HeaderNav bgColor={theme === '#ffffff' ? '#000000' : '#ffffff'}>
+          Navigation
+        </HeaderNav>
       </>
       <NavItem
         active={location.pathname === '/'} // Проверяем, является ли текущий маршрут "/"

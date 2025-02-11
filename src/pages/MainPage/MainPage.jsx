@@ -27,9 +27,9 @@ import icon from '../../images/icon.png';
 const tg = window.Telegram.WebApp;
 
 const MainPage = () => {
-  const onClose = () => {
-    window.Telegram.WebApp.close();
-  };
+  // const onClose = () => {
+  //   window.Telegram.WebApp.close();
+  // };
 
   return (
     <MainContainer>
@@ -37,7 +37,7 @@ const MainPage = () => {
         <CircleStatus />
         Connect<QuestionCon>?</QuestionCon>
       </StatusContainer>
-      <button onClick={onClose}>Закрыть</button>
+      {/* <button onClick={onClose}>Закрыть</button> */}
       <BottomContainer>
         <TopCon>
           <TopConItemContainer>
