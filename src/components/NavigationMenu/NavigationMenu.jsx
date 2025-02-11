@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   MenuContainer,
   CloseButton,
@@ -10,6 +10,7 @@ import { HiMiniSquares2X2 } from 'react-icons/hi2';
 
 const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
   const navigate = useNavigate();
+  const location = useLocation(); // Получаем текущий маршрут
 
   return (
     <MenuContainer
@@ -21,7 +22,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         <HeaderNav>Navigation</HeaderNav>
       </>
       <NavItem
-        active
+        active={location.pathname === '/'} // Проверяем, является ли текущий маршрут "/"
         onClick={() => {
           navigate('/');
           toggleMenu();
@@ -31,6 +32,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         Dashboard
       </NavItem>
       <NavItem
+        active={location.pathname === '/boots'} // Проверяем, является ли текущий маршрут "/boots"
         onClick={() => {
           navigate('/boots');
           toggleMenu();
@@ -39,11 +41,23 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         <FaRocket />
         Boost
       </NavItem>
-      <NavItem onClick={() => navigate('/clear-cache')}>
+      <NavItem
+        active={location.pathname === '/clear-cache'} // Проверяем, является ли текущий маршрут "/clear-cache"
+        onClick={() => {
+          navigate('/clear-cache');
+          toggleMenu();
+        }}
+      >
         <FaBroom />
         Clear Cache
       </NavItem>
-      <NavItem onClick={() => navigate('/statistics')}>
+      <NavItem
+        active={location.pathname === '/statistics'} // Проверяем, является ли текущий маршрут "/statistics"
+        onClick={() => {
+          navigate('/statistics');
+          toggleMenu();
+        }}
+      >
         <FaChartBar />
         Statistics
       </NavItem>
