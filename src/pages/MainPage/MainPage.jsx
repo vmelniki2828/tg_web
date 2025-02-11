@@ -26,12 +26,12 @@ const MainPage = () => {
         Connect<QuestionCon>?</QuestionCon>
       </StatusContainer>
       <button onClick={onClose}>Закрыть</button>
-      <BottomContainer>
+      {/* <BottomContainer>
         <BotCon>
           <ClearCasheBottom>Clear cache 53%</ClearCasheBottom>
           <UpdateBottom>Update</UpdateBottom>
         </BotCon>
-      </BottomContainer>
+      </BottomContainer> */}
     </MainContainer>
   );
 };
