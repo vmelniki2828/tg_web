@@ -119,3 +119,7 @@ export const Lightning = styled(BsFillLightningChargeFill)`
   margin-left: 5px;
   color: black;
 `;
+
+export const NavIcon = styled.img`
+  margin-right: 10px;
+`;

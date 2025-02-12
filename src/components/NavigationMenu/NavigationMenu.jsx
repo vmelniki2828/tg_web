@@ -4,9 +4,11 @@ import {
   CloseButton,
   HeaderNav,
   NavItem,
+  NavIcon,
 } from './NavigationMenu.styled';
 import { FaRocket, FaBroom, FaChartBar } from 'react-icons/fa';
 import { HiMiniSquares2X2 } from 'react-icons/hi2';
+import boosticon from '../../images/boost-icon.png';
 
 const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
           toggleMenu();
         }}
       >
-        <FaRocket />
+        <NavIcon src={boosticon} alt="boosticon" />
         Boost
       </NavItem>
       <NavItem
