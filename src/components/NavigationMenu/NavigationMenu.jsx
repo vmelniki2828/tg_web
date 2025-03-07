@@ -26,7 +26,12 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
       isOpen={isMenuOpen}
       bgColor={theme === '#ffffff' ? '#f5f5f5' : '#080b11'}
     >
-      <CloseButton onClick={toggleMenu}>×</CloseButton>
+      <CloseButton
+        color={theme === '#ffffff' ? '#000000' : '#ffffff'}
+        onClick={toggleMenu}
+      >
+        ×
+      </CloseButton>
       <>
         <HeaderNav bgColor={theme === '#ffffff' ? '#000000' : '#ffffff'}>
           Navigation

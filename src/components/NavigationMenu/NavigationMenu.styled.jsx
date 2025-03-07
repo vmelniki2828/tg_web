@@ -32,7 +32,7 @@ export const CloseButton = styled.div`
   left: 20px;
   font-size: 24px;
   cursor: pointer;
-  color: white;
+  color: ${({ color }) => color};
 `;
 
 export const HeaderNav = styled.div`
