@@ -22,15 +22,13 @@ export const MenuContainer = styled.div`
 
   div {
     margin: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
   }
 `;
 
 export const CloseButton = styled.div`
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 20px;
   font-size: 24px;
   cursor: pointer;
@@ -46,7 +44,11 @@ export const HeaderNav = styled.div`
 `;
 
 export const NavItem = styled.div`
-  width: 95%;
+  font-size: 23px;
+  font-family: 'ProductSans';
+  font-weight: bold;
+  line-height: 1.2;
+
   display: flex;
   align-items: center;
   padding: 12px 16px;
@@ -64,6 +66,9 @@ export const NavItem = styled.div`
     margin-right: 12px;
     font-size: 1.2rem;
   }
+
+  width: 95%;
+  height: 55px;
 `;
 
 export const TopConItemContainer = styled.div`
@@ -122,4 +127,7 @@ export const Lightning = styled(BsFillLightningChargeFill)`
 
 export const NavIcon = styled.img`
   margin-right: 10px;
+
+  width: 20px;
+  height: 20px;
 `;
