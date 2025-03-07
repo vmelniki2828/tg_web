@@ -9,10 +9,17 @@ import {
 import { FaRocket, FaBroom, FaChartBar } from 'react-icons/fa';
 import { HiMiniSquares2X2 } from 'react-icons/hi2';
 import boosticon from '../../images/boost-icon.png';
+import boosticon_dark from '../../images/boost-dark.png';
+import { useState } from 'react';
 
 const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
   const navigate = useNavigate();
   const location = useLocation(); // Получаем текущий маршрут
+  const [iconDarkMode, setIconDarkMode] = useState(false);
+
+  const toggleNavItem = item => {
+    setIconDarkMode(item);
+  };
 
   return (
     <MenuContainer
@@ -30,6 +37,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         onClick={() => {
           navigate('/');
           toggleMenu();
+          toggleNavItem(false);
         }}
       >
         <HiMiniSquares2X2 />
@@ -40,9 +48,14 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         onClick={() => {
           navigate('/boost');
           toggleMenu();
+          toggleNavItem(true);
         }}
       >
-        <NavIcon src={boosticon} alt="boosticon" />
+        {iconDarkMode ? (
+          <NavIcon src={boosticon} alt="boosticon" />
+        ) : (
+          <NavIcon src={boosticon_dark} alt="boosticon" />
+        )}
         Boost
       </NavItem>
       <NavItem
@@ -50,6 +63,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         onClick={() => {
           navigate('/clearCache');
           toggleMenu();
+          toggleNavItem(false);
         }}
       >
         <FaBroom />
@@ -60,6 +74,7 @@ const NavigationMenu = ({ toggleMenu, isMenuOpen, theme }) => {
         onClick={() => {
           navigate('/statistic');
           toggleMenu();
+          toggleNavItem(false);
         }}
       >
         <FaChartBar />
