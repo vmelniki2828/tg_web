@@ -65,6 +65,8 @@ export const TotalNumberText = styled.p`
   line-height: 1.905;
 
   margin-right: 6px;
+
+  font-weight: bold;
 `;
 
 export const NumberBlock = styled.div`
@@ -85,4 +87,95 @@ export const NumberText = styled.p`
   font-family: 'ProductSans', sans-serif;
   color: #ffff;
   line-height: 1.905;
+
+  font-weight: bold;
+`;
+
+export const UserBlock = styled.div`
+  background-color: rgb(244, 245, 245);
+
+  width: 285px;
+  height: 57px;
+
+  margin-top: 21px;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 9px;
+`;
+
+export const UserImg = styled.img`
+  width: 39px;
+  height: 39px;
+
+  margin-right: 12px;
+`;
+
+export const UserInfoBlock = styled.div`
+  margin-right: 95px;
+`;
+
+export const UserName = styled.p`
+  font-size: 12px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.914;
+  margin-bottom: -8px;
+`;
+
+export const UserInfo = styled.p`
+  font-size: 11px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(147, 152, 161);
+  line-height: 2.01;
+`;
+
+export const UserNumber = styled.p`
+  font-size: 14px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+`;
+
+export const UserInfoTextBlock = styled.div`
+  border-radius: 30px;
+  background-color: rgba(0, 122, 255, 0.102);
+  width: 285px;
+  height: 90px;
+
+  margin-top: 24px;
+
+  padding: 23px;
+`;
+
+export const TextInfo = styled.p`
+  font-size: 11px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(72, 160, 255);
+  line-height: 1.2;
+`;
+
+export const HomeButton = styled.button`
+  display: block;
+  margin: auto;
+  text-align: center;
+  
+  background-color: rgb(255, 255, 255);
+
+  width: 332px;
+  height: 40px;
+
+  font-size: 11px;
+  font-family: 'ProductSans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+
+  border: 0;
+  border-radius: 30px;
 `;
