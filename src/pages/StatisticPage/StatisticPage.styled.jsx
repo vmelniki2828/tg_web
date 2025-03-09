@@ -16,7 +16,7 @@ export const CacheButton = styled.button`
   width: 161px;
   height: 40px;
 
-  font-size: 20px;
+  font-size: 11px;
   font-family: 'ProductSans', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -32,7 +32,7 @@ export const ServersButton = styled.button`
   width: 161px;
   height: 40px;
 
-  font-size: 20px;
+  font-size: 11px;
   font-family: 'ProductSans', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -47,7 +47,7 @@ export const InformationBlock = styled.div`
   border-radius: 35px;
   background-color: rgb(255, 255, 255);
 
-  width: 332px;
+  max-width: 332px;
   height: 259px;
 
   padding: 21px 24px 25px 24px;
@@ -59,12 +59,12 @@ export const HPowerBlock = styled.div`
 `;
 
 export const TotalNumberText = styled.p`
-  font-size: 21px;
+  font-size: 12px;
   font-family: 'ProductSans', sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.905;
 
-  margin-right: 8px;
+  margin-right: 6px;
 `;
 
 export const NumberBlock = styled.div`
@@ -74,10 +74,14 @@ export const NumberBlock = styled.div`
   height: 24px;
 
   border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const NumberText = styled.p`
-  font-size: 21px;
+  font-size: 12px;
   font-family: 'ProductSans', sans-serif;
   color: #ffff;
   line-height: 1.905;
