@@ -1,12 +1,12 @@
 import BoostContainer from 'components/BoostContainer/BoostContainer';
 import { BoostPageMain } from './BoostPage.styled';
 
-const BoostPage = () => {
+const BoostPage = ({ itemTheme }) => {
   return (
     <BoostPageMain>
-      <BoostContainer />
-      <BoostContainer />
-      <BoostContainer />
+      <BoostContainer itemTheme={itemTheme} />
+      <BoostContainer itemTheme={itemTheme} />
+      <BoostContainer itemTheme={itemTheme} />
     </BoostPageMain>
   );
 };
