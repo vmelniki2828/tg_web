@@ -9,6 +9,8 @@ import {
   ServersButton,
   StatisticPageConteiner,
   TextInfo,
+  ThunderDark,
+  ThunderLight,
   TotalNumberText,
   UserBlock,
   UserImg,
@@ -20,27 +22,58 @@ import {
 } from './StatisticPage.styled';
 import user_img from '../../images/user_img.png';
 
-const StatisticPage = () => {
+const StatisticPage = ({ itemTheme }) => {
   return (
     <StatisticPageConteiner>
       <ButtonBlock>
         <CacheButton>Clear cache</CacheButton>
         <ServersButton>Selecting servers</ServersButton>
       </ButtonBlock>
-      <InformationBlock>
+      <InformationBlock
+        bgColor={
+          itemTheme === '#ffffff' ? 'rgb(255, 255, 255)' : 'rgb(18, 23, 32)'
+        }
+      >
         <HPowerBlock>
-          <TotalNumberText>Total number of hPower</TotalNumberText>
-          <NumberBlock>
+          <TotalNumberText
+            color={
+              itemTheme === '#ffffff' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'
+            }
+          >
+            Total number of hPower
+          </TotalNumberText>
+          <NumberBlock
+            bgColor={
+              itemTheme === '#ffffff' ? 'rgb(0, 122, 255)' : 'rgb(42, 47, 57)'
+            }
+          >
             <NumberText>530 905</NumberText>
+            {itemTheme === '#ffffff' ? <ThunderLight /> : <ThunderDark />}
           </NumberBlock>
         </HPowerBlock>
-        <UserBlock>
+        <UserBlock
+          bgColor={
+            itemTheme === '#ffffff' ? 'rgb(244, 245, 245)' : 'rgb(23, 28, 38)'
+          }
+        >
           <UserImg src={user_img} />
           <UserInfoBlock>
-            <UserName>Poposha</UserName>
+            <UserName
+              color={
+                itemTheme === '#ffffff' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'
+              }
+            >
+              Poposha
+            </UserName>
             <UserInfo>In the top 20%</UserInfo>
           </UserInfoBlock>
-          <UserNumber>#20</UserNumber>
+          <UserNumber
+            color={
+              itemTheme === '#ffffff' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'
+            }
+          >
+            #20
+          </UserNumber>
         </UserBlock>
         <UserInfoTextBlock>
           <TextInfo>

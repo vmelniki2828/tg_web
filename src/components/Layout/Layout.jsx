@@ -5,8 +5,12 @@ import dark_bg from '../../images/dark_bg.png';
 
 const tg = window.Telegram.WebApp;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, setItemTheme }) => {
   const [theme, setTheme] = useState(tg.themeParams.bg_color || '#ffffff');
+
+  useEffect(() => {
+    setItemTheme(theme);
+  }, [theme]);
 
   useEffect(() => {
     tg.ready();
