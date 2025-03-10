@@ -99,7 +99,11 @@ export const ThunderDark = styled(AiFillThunderbolt)`
   margin-left: -3px;
 `;
 
-export const TimeBlock = styled.div``;
+export const TimeBlock = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 export const TextTimeBlock = styled.p`
   font-size: 11px;
