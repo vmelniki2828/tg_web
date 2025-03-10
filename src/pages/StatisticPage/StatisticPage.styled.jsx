@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiFillThunderbolt } from 'react-icons/ai';
 
 export const StatisticPageConteiner = styled.div``;
 
@@ -45,7 +46,7 @@ export const ServersButton = styled.button`
 export const InformationBlock = styled.div`
   margin: 12px auto;
   border-radius: 35px;
-  background-color: rgb(255, 255, 255);
+  background-color: ${({ bgColor }) => bgColor};
 
   max-width: 332px;
   height: 259px;
@@ -61,7 +62,7 @@ export const HPowerBlock = styled.div`
 export const TotalNumberText = styled.p`
   font-size: 12px;
   font-family: 'ProductSans', sans-serif;
-  color: rgb(0, 0, 0);
+  color: ${({ color }) => color};
   line-height: 1.905;
 
   margin-right: 6px;
@@ -70,7 +71,7 @@ export const TotalNumberText = styled.p`
 `;
 
 export const NumberBlock = styled.div`
-  background-color: rgb(0, 122, 255);
+  background-color: ${({ bgColor }) => bgColor};
 
   width: 72px;
   height: 24px;
@@ -92,7 +93,7 @@ export const NumberText = styled.p`
 `;
 
 export const UserBlock = styled.div`
-  background-color: rgb(244, 245, 245);
+  background-color: ${({ bgColor }) => bgColor};
 
   width: 285px;
   height: 57px;
@@ -121,10 +122,12 @@ export const UserInfoBlock = styled.div`
 export const UserName = styled.p`
   font-size: 12px;
   font-family: 'ProductSans', sans-serif;
-  color: rgb(0, 0, 0);
+
   font-weight: bold;
   line-height: 1.914;
   margin-bottom: -8px;
+
+  color: ${({ color }) => color};
 `;
 
 export const UserInfo = styled.p`
@@ -137,7 +140,7 @@ export const UserInfo = styled.p`
 export const UserNumber = styled.p`
   font-size: 14px;
   font-family: 'ProductSans', sans-serif;
-  color: rgb(0, 0, 0);
+  color: ${({ color }) => color};
   font-weight: bold;
   line-height: 1.2;
 `;
@@ -164,7 +167,7 @@ export const HomeButton = styled.button`
   display: block;
   margin: auto;
   text-align: center;
-  
+
   background-color: rgb(255, 255, 255);
 
   width: 332px;
@@ -178,4 +181,22 @@ export const HomeButton = styled.button`
 
   border: 0;
   border-radius: 30px;
+`;
+
+export const ThunderLight = styled(AiFillThunderbolt)`
+  width: 12px;
+  height: 12px;
+
+  color: rgb(0, 0, 0);
+
+  margin-left: 4px;
+`;
+
+export const ThunderDark = styled(AiFillThunderbolt)`
+  width: 12px;
+  height: 12px;
+
+  color: rgb(255, 255, 255);
+
+  margin-left: 4px;
 `;
