@@ -20,7 +20,7 @@ export const App = () => {
       <Layout setItemTheme={setItemTheme}>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/boost" element={<BoostPage />} />
+          <Route path="/boost" element={<BoostPage itemTheme={itemTheme} />} />
           <Route path="/clearCache" element={<ClearCachePage />} />
           <Route
             path="/statistic"
